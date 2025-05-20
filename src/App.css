@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+/* Reset de estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #141414;
   color: white;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo-img {
+  width: 100px;
+  object-fit: contain;
+}
+
+header nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header nav a:hover {
+  color: #e50914;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Banner principal */
+.banner {
+  position: relative;
+  height: 600px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Stranger_Things_title_card.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner-info h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.banner-info p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  background-color: #e50914;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #f40612;
+}
+
+/* Carrossel de filmes */
+.movie-row {
+  padding: 30px 20px;
+}
+
+.movie-row h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.movie-posters {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+}
+
+.movie-poster {
+  position: relative;
+  min-width: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Efeitos para o cabeçalho */
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .banner-info h1 {
+    font-size: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .banner-info p {
+    font-size: 1.2rem;
+  }
+
+  .banner-buttons .button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .movie-row h2 {
+    font-size: 2rem;
+  }
+
+  .movie-posters {
+    justify-content: center;
+  }
+
+  .movie-poster {
+    min-width: 120px;
   }
 }

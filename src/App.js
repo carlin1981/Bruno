@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {/* Cabeçalho */}
+      <header className="header">
+        <div className="logo">
+          <img
+            src="https://assets-fabapp.com/2897819/b2068f9983b4dac4b5be859821a6be580f361849"
+            alt="Netflix"
+            className="logo-img"
+          />
+        </div>
+        <nav>
+          <a href="#">Início</a>
+          <a href="#">Séries</a>
+          <a href="#">Filmes</a>
+          <a href="#">Minha Lista</a>
+        </nav>
+        <div className="profile">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            alt="Perfil"
+            className="profile-img"
+          />
+        </div>
       </header>
+
+      
+
+      
+              
+          
+        
+     
     </div>
   );
 }

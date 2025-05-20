@@ -1,0 +1,36 @@
+/* Estilo para o Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #141414;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  
+  .logo-img {
+    width: 100px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    opacity: 0.7;
+  }
+  
+  .profile-img {
+    width: 30px;
+    border-radius: 50%;
+  }
+  
