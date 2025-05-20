@@ -1,22 +1,33 @@
-// src/components/Header.js
 import React from 'react';
-import './Hooter.module.css';
+import '../../App.css';
 
 function Header() {
   return (
-    <header className="header">
-      <div className="logo">
-        <h2>MENGOO</h2>
-      </div>
-      <nav className="navbar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div className="Header">
+      {/* Cabeçalho */}
+      <header className="header">
+        <div className="logo">
+          <img
+            src="https://assets-fabapp.com/2897819/b2068f9983b4dac4b5be859821a6be580f361849"
+            alt="Netflix"
+            className="logo-img"
+          />
+        </div>
+        <nav>
+          <a href="#">Início</a>
+          <a href="#">Séries</a>
+          <a href="#">Filmes</a>
+          <a href="#">Minha Lista</a>
+        </nav>
+        <div className="profile">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            alt="Perfil"
+            className="profile-img"
+          />
+        </div>
+      </header>
+    </div>
   );
 }
 
