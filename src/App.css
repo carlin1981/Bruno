@@ -59,9 +59,9 @@ header nav a:hover {
 /* Banner principal */
 .banner {
   position: relative;
-  height: 600px;
+  height: 900px;
   background-image: url('https://i.ytimg.com/vi/MY3oAyuYXmo/maxresdefault.jpg');
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   color: white;
   display: flex;
@@ -69,6 +69,7 @@ header nav a:hover {
   align-items: center;
   text-align: center;
   padding: 10px;
+  margin-top: 120px;
 }
 .banner-info{
   background-color: rgba(0, 0, 0, 0.0.1);
