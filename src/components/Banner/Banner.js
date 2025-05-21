@@ -1,3 +1,6 @@
+import React from 'react';
+import '../../App.css';
+
 function Banner() {
   return (
     <section className="banner">
@@ -5,8 +8,8 @@ function Banner() {
       <div className="banner-info">
         <h1>Stranger Things</h1>
         <p>
-        Quando um garoto desaparece, a cidade toda participa nas buscas.
-        Mas o que encontram são segredos, forças sobrenaturais e uma menina.
+          Um grupo de crianças de uma pequena cidade precisa enfrentar forças
+          sobrenaturais.
         </p>
         <div className="banner-buttons">
           <button className="button">Assistir</button>

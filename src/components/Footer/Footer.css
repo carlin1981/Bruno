@@ -1,0 +1,57 @@
+.netflix-footer {
+    background-color: #141414;
+    color: #757575;
+    padding: 50px 0 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .social-links {
+    margin-bottom: 20px;
+  }
+  
+  .social-icon {
+    color: #757575;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #e50914; /* Vermelho Netflix */
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .links-column {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .links-column a {
+    display: block;
+    color: #757575;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .links-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    font-size: 12px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+  }
