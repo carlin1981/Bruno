@@ -118,41 +118,100 @@ header nav a:hover {
 }
 
 /* Carrossel de filmes */
+/* Estilos do Carrossel */
 .movie-row {
-  padding: 30px 20px;
+  position: relative;
+  margin: 20px 0;
+  padding: 0 50px;
 }
 
-.movie-row h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .movie-posters {
   display: flex;
   overflow-x: auto;
-  gap: 15px;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.movie-posters::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .movie-poster {
-  position: relative;
-  min-width: 150px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.movie-poster:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  flex: 0 0 auto;
+  transition: transform 0.3s;
 }
 
 .movie-poster img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.movie-poster:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.carrossel-button {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 60%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carrossel-button.prev {
+  left: 0;
+}
+
+.carrossel-button.next {
+  right: 0;
+}
+
+.carrossel-container:hover .carrossel-button {
+  opacity: 1;
+}
+
+.carrossel-button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .movie-row {
+    padding: 0 20px;
+  }
+  
+  .movie-poster img {
+    width: 150px;
+    height: 225px;
+  }
+  
+  .carrossel-button {
+    width: 30px;
+    font-size: 20px;
+  }
 }
 
 /* Efeitos para o cabeçalho */
