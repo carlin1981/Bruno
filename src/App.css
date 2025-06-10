@@ -118,102 +118,83 @@ header nav a:hover {
 }
 
 /* Carrossel de filmes */
-/* Estilos do Carrossel */
-.movie-row {
-  position: relative;
-  margin: 20px 0;
-  padding: 0 50px;
-}
-
+/* Container principal */
 .carrossel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.movie-posters {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding: 10px 0;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.movie-posters::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
-}
-
-.movie-poster {
-  flex: 0 0 auto;
-  transition: transform 0.3s;
-}
-
-.movie-poster img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.movie-poster:hover img {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.carrossel-button {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  width: 40px;
-  height: 60%;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
 }
 
-.carrossel-button.prev {
-  left: 0;
+/* Área onde os posters estão */
+.movie-posters {
+  display: flex;
+  width: 80%;
+  overflow: hidden;
 }
 
-.carrossel-button.next {
-  right: 0;
+/* Wrapper dos posters para transição suave */
+.movie-poster-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.carrossel-container:hover .carrossel-button {
-  opacity: 1;
+/* Estilos dos posters individuais */
+.movie-poster {
+  min-width: 300px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-.carrossel-button:disabled {
-  opacity: 0.2;
-  cursor: not-allowed;
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-  .movie-row {
-    padding: 0 20px;
-  }
-  
-  .movie-poster img {
-    width: 150px;
-    height: 225px;
-  }
-  
-  .carrossel-button {
-    width: 30px;
-    font-size: 20px;
-  }
+/* Botões de navegação */
+.carrossel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.carrossel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Posicionamento dos botões */
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Removendo scrollbar para um visual limpo */
+.movie-posters::-webkit-scrollbar {
+  display: none;
+}
+
+/*Cabeçalho*/
 /* Efeitos para o cabeçalho */
 header.scrolled {
   background-color: rgba(0, 0, 0, 0.8);
